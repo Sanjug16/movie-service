@@ -10,8 +10,8 @@ phases:
     commands:
       - echo Logging in to Amazon ECR....
       - aws --version
-      - aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $REPOSITORY_URI
-      - IMAGE_TAG=$(basename $CODEBUILD_BUILD_ID)
+      - aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 980921715584.dkr.ecr.eu-north-1.amazonaws.com
+      - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
       - echo REPOSITORY_URI=$REPOSITORY_URI
       - echo IMAGE_TAG=$IMAGE_TAG
   build:
