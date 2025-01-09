@@ -3,7 +3,7 @@ env:
   variables:
     REGION: "eu-north-1"
     REPOSITORY_URI: "980921715584.dkr.ecr.eu-north-1.amazonaws.com/movie-img"
-    DOCKER_CONTAINER_NAME: "spring-demo-ecr"
+    DOCKER_CONTAINER_NAME: "movie-cntr"
 phases:
   pre_build:
     commands:
